@@ -1,0 +1,79 @@
+.header {
+  background-color: #ffffff;
+  margin-bottom: 32px;
+}
+
+.header__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 25px;
+}
+
+.header__discount-text {
+  color: #2d3242;
+  font-size: 30px;
+  font-family: 'PT Root UI';
+  font-weight: 700;
+  line-height: 39px;
+  padding: 20px 0 21px 0;
+}
+.header__timer {
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+  column-gap: 27px;
+  position: relative;
+}
+
+.header__time-block {
+  position: relative;
+}
+
+.header__number {
+  color: #01b9c5;
+  font-family: 'Bebas Neue';
+  font-size: 60px;
+  line-height: 61.8px;
+}
+
+.header__number_over {
+  color: #fd4d35;
+}
+
+.header__time-unit {
+  position: absolute;
+  color: #818798;
+  font-family: 'PT Root UI';
+  font-weight: 700;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20.8px;
+  text-align: center;
+  bottom: -15px;
+}
+
+.header__clock-dots {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 5px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.header__clock-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #01b9c5;
+  opacity: 50%;
+}
+
+.header__clock-dot_over {
+  background-color: #fd4d35;
+}

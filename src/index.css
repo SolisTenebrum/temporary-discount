@@ -1,0 +1,11 @@
+@import url('./../vendor/normalize.css');
+@import url('./../vendor/fonts.css');
+
+body {
+  background-color: #F5F7F7;
+  height: 120vh;
+}
+
+h1, h2, p, ul, li {
+  margin: 0;
+}

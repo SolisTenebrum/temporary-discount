@@ -1,0 +1,277 @@
+.choose-plan {
+}
+
+.choose-plan__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 16px;
+}
+
+.choose-plan__title {
+  color: #2d3242;
+  font-size: 40px;
+  line-height: 38px;
+  letter-spacing: 0.38px;
+  font-family: 'Rubik Bold';
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-bottom: 97px;
+  text-align: center;
+}
+
+.choose-plan__content {
+  display: flex;
+  column-gap: 79px;
+  justify-content: center;
+}
+
+.choose-plan__image-container {
+  position: relative;
+  max-width: 434px;
+}
+
+.choose-plan__image {
+  width: 100%;
+}
+
+.choose-plan__image-background {
+  position: absolute;
+  background-image: linear-gradient(to top, #f5f7f7, #f5f7f7, transparent);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  z-index: 2;
+}
+
+.choose-plan__plans {
+  flex-basis: 589px;
+}
+
+.choose-plan__cards-container {
+  display: flex;
+  column-gap: 8px;
+  row-gap: 36px;
+  flex-wrap: wrap;
+  margin-bottom: 12.79px;
+}
+
+.choose-plan__card {
+  border-color: #d3d6dd;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 2px;
+  position: relative;
+  width: 187px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.choose-plan__card:hover {
+  background-color: #01b9c50d;
+  border-color: #01b9c5;
+}
+
+.choose-plan__card_active {
+  background-color: #01b9c50d;
+  border-color: #01b9c5;
+}
+
+.choose-plan__card:nth-child(n + 4) {
+  width: 100%;
+}
+
+.choose-plan__card-body {
+  padding: 45px 27px 26px 31px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 187px;
+}
+
+.choose-plan__card:nth-child(n + 4) .choose-plan__card-body {
+  padding: 23px 52px 25px 31px;
+  flex-direction: row;
+  max-width: 100%;
+}
+
+.choose-plan__card-title {
+  align-self: flex-start;
+  margin-bottom: 21px;
+  color: #687078;
+  font-family: 'Bebas Neue';
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.choose-plan__card:nth-child(n + 4) .choose-plan__card-title {
+  align-self: center;
+  font-size: 38px;
+  line-height: 38px;
+  color: #2d3242;
+  padding-right: 20px;
+}
+
+.choose-plan__card-price {
+  margin-bottom: 18px;
+  font-family: 'PT Root UI';
+  padding-left: 5px;
+}
+
+.choose-plan__card:nth-child(n + 4) .choose-plan__card-price {
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 55px;
+}
+
+.choose-plan__card:nth-child(n + 4) .choose-plan__card-price_over {
+  width: 100%;
+  padding-right: 0;
+}
+
+.choose-plan__card-new-price {
+  font-weight: 700;
+  color: #2d3242;
+  font-size: 50px;
+  line-height: 55px;
+  letter-spacing: -2px;
+  text-align: start;
+}
+
+.choose-plan__card-old-price {
+  font-weight: 500;
+  color: #95979f;
+  text-decoration: line-through;
+  font-size: 24px;
+  line-height: 26.4px;
+  text-align: end;
+}
+
+.choose-plan__card:nth-child(n + 4) .choose-plan__card-old-price {
+  margin-top: -3px;
+}
+
+.choose-plan__card-description {
+  font-family: 'PT Root UI';
+  font-weight: 500;
+  text-align: center;
+  color: #2f4353;
+  line-height: 20.8px;
+}
+
+.choose-plan__card:nth-child(n + 4) .choose-plan__card-description {
+  text-align: start;
+  align-self: flex-end;
+}
+
+.choose-plan__discount-icon {
+  position: absolute;
+  background-image: url('../../assets/dicsount-bg.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -30px;
+  right: 7px;
+}
+
+.choose-plan__discount {
+  margin-top: 5px;
+  font-family: 'PT Root UI';
+  font-weight: 500;
+  font-size: 18.67px;
+  line-height: 24.27px;
+  color: #ffffff;
+}
+
+.choose-plan__buy {
+}
+
+.choose-plan__buy-text {
+  font-family: 'PT Root UI';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: #2d3242;
+  margin-bottom: 26.21px;
+}
+
+.choose-plan__agreement {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  margin-bottom: 50px;
+}
+
+.choose-plan__agreement-checkbox {
+  display: none;
+}
+
+.choose-plan__agreement-text {
+  position: relative;
+  font-family: 'PT Root UI';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17.6px;
+  color: #818798;
+  max-width: 364px;
+  padding-left: 36px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.choose-plan__agreement-text::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: url('../../assets/checkBoxOff.svg') no-repeat center center;
+  background-size: contain;
+}
+
+.choose-plan__agreement-checkbox:checked + .choose-plan__agreement-text::before {
+  background: url('../../assets/checkBoxOn.svg') no-repeat center center;
+  background-size: contain;
+}
+
+.choose-plan__agreement-link {
+  color: #2d97f9;
+  text-decoration: none;
+}
+
+.choose-plan__buy-button {
+  font-family: 'Rubik Bold';
+  border-radius: 60px;
+  background-color: #fd4d35;
+  color: #ffffff;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  padding: 28px 100px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.choose-plan__subtext {
+  font-family: 'PT Root UI';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18.2px;
+  color: #818798;
+}
+
+.invisible {
+  visibility: hidden;
+}
