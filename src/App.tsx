@@ -1,13 +1,22 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Modal from './components/Modal/Modal';
+import { fetchData } from './utils/data';
+import { IPlan } from './types/types';
 
 function App() {
-  const [timeRemaining, setTimeRemaining] = useState(1 * 6 * 1000);
-  const [isActive, setIsActive] = useState(true);
-  const [isOver, setIsOver] = useState(false);
-  const [isRunningOut, setRunningOut] = useState(false);
+  const [timeRemaining, setTimeRemaining] = useState<number>(1 * 6 * 1000);
+  const [isActive, setIsActive] = useState<boolean>(true);
+  const [isOver, setIsOver] = useState<boolean>(false);
+  const [isRunningOut, setRunningOut] = useState<boolean>(false);
+  const [data, setData] = useState<IPlan[]>([]);
+
+  useEffect(() => {
+    fetchData().then((data) => {
+      setData(data);
+    });
+  }, []);
 
   useEffect(() => {
     if (isActive && timeRemaining > 0) {
@@ -37,11 +46,18 @@ function App() {
   const minutes = Math.floor((timeRemaining / 1000 / 60) % 60);
   const seconds = Math.floor((timeRemaining / 1000) % 60);
 
+  const newPrices = useMemo(() => data.filter((item: any) => item.isPopular === true), [data]);
+  const oldPrices = useMemo(
+    () => data.filter((item: any) => item.isPopular === false && item.isDiscount === false),
+    [data]
+  );
+  const popupPrices = useMemo(() => data.filter((item: any) => item.isDiscount === true), [data]);
+
   return (
     <>
       <Header minutes={minutes} seconds={seconds} isOver={isOver} isRunningOut={isRunningOut} />
-      <Main isOver={isOver} />
-      <Modal isOver={isOver} />
+      <Main isOver={isOver} newPrices={newPrices} oldPrices={oldPrices} />
+      <Modal isOver={isOver} popupPrices={popupPrices} oldPrices={oldPrices} />
     </>
   );
 }
