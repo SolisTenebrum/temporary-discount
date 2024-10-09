@@ -42,7 +42,7 @@ const Modal = memo(
     });
 
     return (
-      <div className={`modal ${!isModalOpen && 'modal_closed'} ${isOver && 'modal_opened'}`}>
+      <div className={`modal ${isModalOpen ? 'modal_opened' : 'modal_closed'} ${isOver && 'modal_opened'}`}>
         <div className="modal__container">
           <div className="modal__close" onClick={handleModalClose} />
           <div className="modal__hot-offer">
