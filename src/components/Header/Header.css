@@ -64,6 +64,7 @@
   row-gap: 5px;
   top: 50%;
   transform: translate(0, -50%);
+  animation: blink 1.5s infinite linear;
 }
 
 .header__clock-dot {
@@ -76,4 +77,26 @@
 
 .header__clock-dot_over {
   background-color: #fd4d35;
+}
+
+.blink {
+  animation: blink 1.5s infinite linear;
+}
+
+.blink_over {
+  animation: none;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
