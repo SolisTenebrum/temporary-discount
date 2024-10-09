@@ -54,9 +54,7 @@ const Main = React.memo(({ isOver }: { isOver: boolean }) => {
   const handleCardClick = (id: number) => {
     setActiveCard(id);
   };
-
-  console.log(activeCard);
-
+  
   const array = [
     {
       title: '1 неделя',
