@@ -132,6 +132,16 @@
   border-radius: 20px;
 }
 
+.modal__card:hover {
+  background-color: #01b9c50d;
+  border-color: #01b9c5;
+}
+
+.modal__card_active {
+  background-color: #01b9c50d;
+  border-color: #01b9c5;
+}
+
 .modal__card-body {
   padding: 26px 22px 20px 26px;
 }
