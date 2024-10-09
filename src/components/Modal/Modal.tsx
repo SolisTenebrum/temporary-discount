@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import './Modal.css';
+import React from 'react';
 
 interface IModalCard {
   title: string;
@@ -53,7 +54,8 @@ const ModalCard = ({
   );
 };
 
-const Modal = ({ isOver }: { isOver: boolean }) => {
+const Modal = React.memo(({ isOver }: { isOver: boolean }) => {
+  console.log('rendered?');
   const [isModalOpen, setModalOpen] = useState(false);
   const [activeCard, setActiveCard] = useState<number | null>(null);
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
@@ -68,7 +70,7 @@ const Modal = ({ isOver }: { isOver: boolean }) => {
 
   const handleCardClick = (id: number, title: string) => {
     setActiveCard(id);
-    handleRadioChange(title);
+    setSelectedPlan(title);
   };
 
   useEffect(() => {
@@ -143,6 +145,6 @@ const Modal = ({ isOver }: { isOver: boolean }) => {
       </div>
     </div>
   );
-};
+});
 
 export default Modal;
