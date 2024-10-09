@@ -4,7 +4,7 @@ import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 
 function App() {
-  const [timeRemaining, setTimeRemaining] = useState(1 * 3 * 1000);
+  const [timeRemaining, setTimeRemaining] = useState(1 * 6 * 1000);
   const [isActive, setIsActive] = useState(true);
   const [isOver, setIsOver] = useState(false);
   const [isRunningOut, setRunningOut] = useState(false);

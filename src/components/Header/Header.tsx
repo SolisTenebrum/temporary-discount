@@ -1,6 +1,6 @@
 import './Header.css';
 
-const Header = ({ minutes, seconds, isOver, isRunningOut }: { minutes: number; seconds: number; isOver: boolean, isRunningOut: boolean }) => {
+const Header = ({ minutes, seconds, isRunningOut }: { minutes: number; seconds: number; isOver: boolean, isRunningOut: boolean }) => {
   return (
     <div className="header">
       <div className="header__container">
