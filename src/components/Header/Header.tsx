@@ -1,6 +1,8 @@
+import React from 'react';
 import './Header.css';
 
-const Header = ({ minutes, seconds, isRunningOut }: { minutes: number; seconds: number; isOver: boolean, isRunningOut: boolean }) => {
+const Header = React.memo(({ minutes, seconds, isRunningOut }: { minutes: number; seconds: number; isOver: boolean, isRunningOut: boolean }) => {
+    
   return (
     <div className="header">
       <div className="header__container">
@@ -26,6 +28,6 @@ const Header = ({ minutes, seconds, isRunningOut }: { minutes: number; seconds: 
       </div>
     </div>
   );
-};
+});
 
 export default Header;

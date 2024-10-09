@@ -1,6 +1,7 @@
 import './Main.css';
 import manImg from '../../assets/a_man.png';
 import { useState } from 'react';
+import React from 'react';
 
 interface IPlanCard {
   title: string;
@@ -47,13 +48,14 @@ const PlanCard = ({
   );
 };
 
-const Main = ({ isOver }: { isOver: boolean }) => {
+const Main = React.memo(({ isOver }: { isOver: boolean }) => {
   const [activeCard, setActiveCard] = useState<number | null>(null);
 
   const handleCardClick = (id: number) => {
     setActiveCard(id);
-    console.log(activeCard);
   };
+
+  console.log(activeCard);
 
   const array = [
     {
@@ -145,6 +147,6 @@ const Main = ({ isOver }: { isOver: boolean }) => {
       </section>
     </main>
   );
-};
+});
 
 export default Main;
