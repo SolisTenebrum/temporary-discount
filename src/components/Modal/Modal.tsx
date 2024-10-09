@@ -7,16 +7,38 @@ interface IModalCard {
   oldPrice: string;
   discount: string;
   id: number;
-  handleCardClick: (id: number) => void;
+  handleCardClick: (id: number, title: string) => void;
   activeCard: boolean;
+  handleRadioChange: (plan: string) => void;
+  selectedPlan: string | null;
 }
 
-const ModalCard = ({ title, newPrice, oldPrice, discount, id, handleCardClick, activeCard }: IModalCard) => {
+const ModalCard = ({
+  title,
+  newPrice,
+  oldPrice,
+  discount,
+  id,
+  handleCardClick,
+  activeCard,
+  handleRadioChange,
+  selectedPlan,
+}: IModalCard) => {
   return (
-    <div className={`modal__card ${activeCard && 'modal__card_active'}`} onClick={() => handleCardClick(id)}>
+    <div className={`modal__card ${activeCard && 'modal__card_active'}`} onClick={() => handleCardClick(id, title)}>
       <div className="modal__card-body">
         <div className="modal__card-top">
-          <input className="modal__radio" type="radio" name="plan" />
+          <label className="modal__radio-label" htmlFor={`radio-${id}`}>
+            <input
+              className="modal__radio-input"
+              type="radio"
+              name="plan"
+              id={`radio-${id}`}
+              checked={selectedPlan === title}
+              onChange={() => handleRadioChange(title)}
+            />
+            <div className="modal__radio" />
+          </label>
           <p className="modal__card-title">{title}</p>
           <p className="modal__old-price">{oldPrice}</p>
         </div>
@@ -34,13 +56,19 @@ const ModalCard = ({ title, newPrice, oldPrice, discount, id, handleCardClick, a
 const Modal = ({ isOver }: { isOver: boolean }) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [activeCard, setActiveCard] = useState<number | null>(null);
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+
+  const handleRadioChange = (plan: string | null) => {
+    setSelectedPlan(plan);
+  };
 
   const handleModalClose = () => {
     setModalOpen(false);
   };
 
-  const handleCardClick = (id: number) => {
+  const handleCardClick = (id: number, title: string) => {
     setActiveCard(id);
+    handleRadioChange(title);
   };
 
   useEffect(() => {
@@ -103,6 +131,8 @@ const Modal = ({ isOver }: { isOver: boolean }) => {
                     id={index}
                     handleCardClick={handleCardClick}
                     activeCard={activeCard === index}
+                    handleRadioChange={handleRadioChange}
+                    selectedPlan={selectedPlan}
                   />
                 );
               })}

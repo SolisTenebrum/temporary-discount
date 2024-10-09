@@ -151,10 +151,34 @@
   margin-bottom: 24px;
 }
 
-.modal__radio {
+.modal__radio-label {
   position: absolute;
   top: 27px;
   right: 22px;
+}
+
+.modal__radio-input {
+  display: none;
+}
+
+.modal__radio {
+  background-image: url('../../assets/radio_button_no_active.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.modal__radio-input:checked + .modal__radio {
+  background-image: url('../../assets/radio_button_active.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
 }
 
 .modal__card-title {
@@ -197,8 +221,8 @@
 }
 
 .modal__card-bottom {
-  position: relative;
   max-width: 670px;
+  display: flex;
 }
 
 .modal__new-price {
@@ -210,7 +234,7 @@
 }
 
 .modal__discount-icon {
-  position: absolute;
+  position: relative;
   background-image: url('../../assets/dicsount-bg.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -222,6 +246,7 @@
   justify-content: center;
   top: -20px;
   right: 0;
+  flex-shrink: 0;
 }
 
 .modal__discount {
