@@ -55,7 +55,6 @@ const ModalCard = ({
 };
 
 const Modal = React.memo(({ isOver }: { isOver: boolean }) => {
-  console.log('rendered?');
   const [isModalOpen, setModalOpen] = useState(false);
   const [activeCard, setActiveCard] = useState<number | null>(null);
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
