@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
+import Modal from './components/Modal/Modal';
 
 function App() {
   const [timeRemaining, setTimeRemaining] = useState(1 * 6 * 1000);
@@ -40,6 +41,7 @@ function App() {
     <>
       <Header minutes={minutes} seconds={seconds} isOver={isOver} isRunningOut={isRunningOut} />
       <Main isOver={isOver} />
+      <Modal isOver={isOver} />
     </>
   );
 }
