@@ -129,6 +129,15 @@
   justify-content: center;
   top: -30px;
   right: 7px;
+  opacity: 1;
+  transform: translateY(0%) rotate(0);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.choose-plan__discount-icon_over {
+  opacity: 0;
+  transform: translateY(100%) rotate(180deg);
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .choose-plan__discount {

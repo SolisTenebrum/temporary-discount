@@ -7,7 +7,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0s 0.3s;
+  transition: opacity 0.3s ease, visibility 0s 0.5s;
   z-index: 2;
 }
 
@@ -18,7 +18,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.8);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease 0.5s;
 }
 
 .modal__close {
@@ -127,7 +127,7 @@
 .modal_opened {
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease 0.5s;
 }
 
 .modal_opened .modal__container {

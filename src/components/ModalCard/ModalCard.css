@@ -127,6 +127,14 @@
   top: -20px;
   right: 0;
   flex-shrink: 0;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+
+.modal__discount-icon_visible {
+  transform: scale(1);
+  transition: transform 0.3s ease 0.5s;
+  animation: rotation 2s linear infinite 0.9s;
 }
 
 .modal__discount {
@@ -136,4 +144,22 @@
   font-size: 13.33px;
   line-height: 17.33px;
   color: #ffffff;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }

@@ -20,6 +20,7 @@ interface IModalCard {
   selectedPlan: string | null;
   onCardClick: (id: number, title: string) => void;
   onRadioChange: (plan: string) => void;
+  isOver: boolean;
 }
 
 interface IPlan {

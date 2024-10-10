@@ -3,8 +3,9 @@ import manImg from '../../assets/a_man.png';
 import { useState } from 'react';
 import { descriptions } from '../../utils/constants';
 import './ChoosePlan.css';
+import { IPlan } from '../../types/types';
 
-const ChoosePlan = ({ isOver, newPrices, oldPrices }: { isOver: boolean; newPrices: any[]; oldPrices: any[] }) => {
+const ChoosePlan = ({ isOver, newPrices, oldPrices }: { isOver: boolean; newPrices: IPlan[]; oldPrices: IPlan[] }) => {
   const [activeCard, setActiveCard] = useState<number | null>(null);
 
   const handleCardClick = (id: number) => {

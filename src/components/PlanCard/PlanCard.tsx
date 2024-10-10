@@ -21,11 +21,9 @@ const PlanCard = ({
           <p className={`choose-plan__card-old-price ${isOver && 'invisible'}`}>{oldPrice}₽</p>
         </div>
         <p className="choose-plan__card-description">{description}</p>
-        {!isOver && (
-          <div className="choose-plan__discount-icon">
-            <p className="choose-plan__discount">{discount}</p>
-          </div>
-        )}
+        <div className={`choose-plan__discount-icon ${isOver && 'choose-plan__discount-icon_over'}`}>
+          <p className="choose-plan__discount">{discount}</p>
+        </div>
       </div>
     </div>
   );

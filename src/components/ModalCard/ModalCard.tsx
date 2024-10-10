@@ -11,6 +11,7 @@ const ModalCard = ({
   activeCard,
   onRadioChange,
   selectedPlan,
+  isOver
 }: IModalCard) => {
   return (
     <div className={`modal__card ${activeCard && 'modal__card_active'}`} onClick={() => onCardClick(id, title)}>
@@ -32,7 +33,7 @@ const ModalCard = ({
         </div>
         <div className="modal__card-bottom">
           <p className="modal__new-price">{newPrice}₽</p>
-          <div className="modal__discount-icon">
+          <div className={`modal__discount-icon ${isOver &&'modal__discount-icon_visible'}`}>
             <p className="modal__discount">{discount}</p>
           </div>
         </div>
@@ -40,5 +41,4 @@ const ModalCard = ({
     </div>
   );
 };
-
 export default ModalCard;

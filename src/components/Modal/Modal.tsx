@@ -76,6 +76,7 @@ const Modal = memo(
                       activeCard={activeCard === index}
                       onRadioChange={handleRadioChange}
                       selectedPlan={selectedPlan}
+                      isOver={isOver}
                     />
                   );
                 })}
