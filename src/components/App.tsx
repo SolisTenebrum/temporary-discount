@@ -48,12 +48,12 @@ function App() {
   const minutes = Math.floor((timeRemaining / 1000 / 60) % 60);
   const seconds = Math.floor((timeRemaining / 1000) % 60);
 
-  const newPrices = useMemo(() => data.filter((item: any) => item.isPopular === true), [data]);
+  const newPrices = useMemo(() => data.filter((item: IPlan) => item.isPopular === true), [data]);
   const oldPrices = useMemo(
-    () => data.filter((item: any) => item.isPopular === false && item.isDiscount === false),
+    () => data.filter((item: IPlan) => item.isPopular === false && item.isDiscount === false),
     [data]
   );
-  const popupPrices = useMemo(() => data.filter((item: any) => item.isDiscount === true), [data]);
+  const popupPrices = useMemo(() => data.filter((item: IPlan) => item.isDiscount === true), [data]);
 
   return (
     <>
