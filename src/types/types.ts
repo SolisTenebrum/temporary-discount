@@ -1,13 +1,13 @@
 interface IPlanCard {
-  id: number;
+  id: string;
   title: string;
-  newPrice: string;
-  oldPrice: string;
+  newPrice: number;
+  oldPrice: number;
   description?: string;
   discount?: string;
   isOver: boolean;
   activeCard: boolean;
-  onCardClick: (id: number) => void;
+  onCardClick: (id: string) => void;
 }
 
 interface IModalCard {
@@ -18,7 +18,7 @@ interface IModalCard {
   discount: string;
   activeCard: boolean;
   selectedPlan: string | null;
-  onCardClick: (id: number, title: string) => void;
+  onCardClick: (id: string, title: string) => void;
   onRadioChange: (plan: string) => void;
   isOver: boolean;
 }
