@@ -133,10 +133,6 @@
   color: #818798;
 }
 
-.invisible {
-  visibility: hidden;
-}
-
 @keyframes pulse {
   0% {
     transform: scale(1);
