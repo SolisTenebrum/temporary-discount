@@ -1,24 +1,16 @@
-'use client'
+'use client';
 
 import { useEffect, useMemo, useState } from 'react';
-import { fetchData } from '../utils/data';
 import { IPlan } from '../types/types';
 import Header from './Header';
 import Main from './Main';
 import Modal from './Modal';
 
-function App() {
+function App({ initialData }: { initialData: IPlan[] }) {
   const [timeRemaining, setTimeRemaining] = useState<number>(1 * 6 * 1000);
   const [isActive, setIsActive] = useState<boolean>(true);
   const [isOver, setIsOver] = useState<boolean>(false);
   const [isRunningOut, setRunningOut] = useState<boolean>(false);
-  const [data, setData] = useState<IPlan[]>([]);
-
-  useEffect(() => {
-    fetchData().then((data) => {
-      setData(data);
-    });
-  }, []);
 
   useEffect(() => {
     if (isActive && timeRemaining > 0) {
@@ -48,12 +40,12 @@ function App() {
   const minutes = Math.floor((timeRemaining / 1000 / 60) % 60);
   const seconds = Math.floor((timeRemaining / 1000) % 60);
 
-  const newPrices = useMemo(() => data.filter((item: IPlan) => item.isPopular === true), [data]);
+  const newPrices = useMemo(() => initialData.filter((item: IPlan) => item.isPopular === true), [initialData]);
   const oldPrices = useMemo(
-    () => data.filter((item: IPlan) => item.isPopular === false && item.isDiscount === false),
-    [data]
+    () => initialData.filter((item: IPlan) => item.isPopular === false && item.isDiscount === false),
+    [initialData]
   );
-  const popupPrices = useMemo(() => data.filter((item: IPlan) => item.isDiscount === true), [data]);
+  const popupPrices = useMemo(() => initialData.filter((item: IPlan) => item.isDiscount === true), [initialData]);
 
   return (
     <>
