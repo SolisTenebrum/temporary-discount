@@ -10,4 +10,6 @@ const Main = memo(({ isOver, newPrices, oldPrices }: { isOver: boolean; newPrice
   );
 });
 
+Main.displayName = 'Main';
+
 export default Main;

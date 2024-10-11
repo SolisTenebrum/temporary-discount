@@ -92,4 +92,6 @@ const Modal = memo(
   }
 );
 
+Modal.displayName = 'Modal';
+
 export default Modal;
