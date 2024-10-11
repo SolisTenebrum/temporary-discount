@@ -20,8 +20,8 @@ const Modal = memo(
       setModalOpen(false);
     };
 
-    const handleCardClick = (id: number, title: string) => {
-      setActiveCard(id);
+    const handleCardClick = (id: string, title: string) => {
+      setActiveCard(parseInt(id));
       setSelectedPlan(title);
     };
 
@@ -73,7 +73,7 @@ const Modal = memo(
                       newPrice={card.newPrice}
                       oldPrice={card.oldPrice}
                       discount={card.discount}
-                      id={index}
+                      id={card.id}
                       onCardClick={handleCardClick}
                       activeCard={activeCard === index}
                       onRadioChange={handleRadioChange}

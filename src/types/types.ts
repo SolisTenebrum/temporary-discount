@@ -11,7 +11,7 @@ interface IPlanCard {
 }
 
 interface IModalCard {
-  id: number;
+  id: string;
   title: string;
   newPrice: number;
   oldPrice: number;
