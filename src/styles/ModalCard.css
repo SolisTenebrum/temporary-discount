@@ -42,7 +42,7 @@
 }
 
 .modal__radio {
-  background-image: url('../../assets/radio_button_no_active.svg');
+  background-image: url('/assets/radio_button_no_active.svg');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
@@ -52,7 +52,7 @@
 }
 
 .modal__radio-input:checked + .modal__radio {
-  background-image: url('../../assets/radio_button_active.svg');
+  background-image: url('/assets/radio_button_active.svg');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
@@ -115,7 +115,7 @@
 
 .modal__discount-icon {
   position: relative;
-  background-image: url('../../assets/dicsount-bg.svg');
+  background-image: url('/assets/dicsount-bg.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;

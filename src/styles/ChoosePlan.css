@@ -33,6 +33,7 @@
 .choose-plan__image-container {
   position: relative;
   max-width: 434px;
+  height: 715px;
 }
 
 .choose-plan__image {
@@ -42,7 +43,7 @@
 .choose-plan__image-background {
   position: absolute;
   background-image: linear-gradient(to top, #f5f7f7, #f5f7f7, transparent);
-  bottom: 0;
+  bottom: -40px;
   left: 0;
   width: 100%;
   height: 20%;
@@ -97,12 +98,12 @@
   transform: translateY(-50%);
   width: 24px;
   height: 24px;
-  background: url('../../assets/checkBoxOff.svg') no-repeat center center;
+  background: url('/assets/checkBoxOff.svg') no-repeat center center;
   background-size: contain;
 }
 
 .choose-plan__agreement-checkbox:checked + .choose-plan__agreement-text::before {
-  background: url('../../assets/checkBoxOn.svg') no-repeat center center;
+  background: url('/assets/checkBoxOn.svg') no-repeat center center;
   background-size: contain;
 }
 

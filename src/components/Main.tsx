@@ -1,6 +1,6 @@
 import { memo } from 'react';
-import ChoosePlan from '../ChoosePlan/ChoosePlan';
-import { IPlan } from '../../types/types';
+import ChoosePlan from './ChoosePlan';
+import { IPlan } from '@/types/types';
 
 const Main = memo(({ isOver, newPrices, oldPrices }: { isOver: boolean; newPrices: IPlan[]; oldPrices: IPlan[] }) => {
   return (

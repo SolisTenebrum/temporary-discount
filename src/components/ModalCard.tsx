@@ -1,5 +1,5 @@
-import { IModalCard } from '../../types/types';
-import './ModalCard.css';
+import { IModalCard } from '@/types/types';
+import './../styles/ModalCard.css';
 
 const ModalCard = ({
   title,

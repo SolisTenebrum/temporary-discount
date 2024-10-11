@@ -1,41 +1,41 @@
 @font-face {
   font-family: 'Bebas Neue';
-  src: url('./fonts/Bebas_Neue.ttf') format('truetype');
+  src: url('/fonts/Bebas_Neue.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PT Root UI';
-  src: url('./fonts/pt-root-ui_bold.ttf') format('truetype');
+  src: url('/fonts/pt-root-ui_bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PT Root UI';
-  src: url('./fonts/pt-root-ui_regular.ttf') format('truetype');
+  src: url('/fonts/pt-root-ui_regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PT Root UI';
-  src: url('./fonts/pt-root-ui_light.ttf') format('truetype');
+  src: url('/fonts/pt-root-ui_light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PT Root UI';
-  src: url('./fonts/pt-root-ui_medium.ttf') format('truetype');
+  src: url('/fonts/pt-root-ui_medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
     font-family: 'Rubik Bold';
-    src: url('./fonts/Rubik-Bold.ttf') format('truetype');
+    src: url('/fonts/Rubik-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }

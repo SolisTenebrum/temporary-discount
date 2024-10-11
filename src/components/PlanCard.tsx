@@ -1,5 +1,5 @@
-import { IPlanCard } from '../../types/types';
-import './PlanCard.css';
+import { IPlanCard } from '@/types/types';
+import './../styles/PlanCard.css';
 
 const PlanCard = ({
   title,

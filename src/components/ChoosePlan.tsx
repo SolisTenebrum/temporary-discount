@@ -1,9 +1,10 @@
-import PlanCard from '../PlanCard/PlanCard';
-import manImg from '../../assets/a_man.png';
+'use client'
+
 import { useState } from 'react';
-import { descriptions } from '../../utils/constants';
-import './ChoosePlan.css';
-import { IPlan } from '../../types/types';
+import './../styles/ChoosePlan.css';
+import { IPlan } from '@/types/types';
+import { descriptions } from '@/utils/constants';
+import PlanCard from './PlanCard';
 
 const ChoosePlan = ({ isOver, newPrices, oldPrices }: { isOver: boolean; newPrices: IPlan[]; oldPrices: IPlan[] }) => {
   const [activeCard, setActiveCard] = useState<number | null>(null);
@@ -32,7 +33,7 @@ const ChoosePlan = ({ isOver, newPrices, oldPrices }: { isOver: boolean; newPric
         <h1 className="choose-plan__title">Выберите подходящий тарифный план</h1>
         <div className="choose-plan__content">
           <div className="choose-plan__image-container">
-            <img src={manImg} alt="A standing man" className="choose-plan__image" />
+            <img src={'/assets/a_man.png'} alt="A standing man" className="choose-plan__image" />
             <div className="choose-plan__image-background" />
           </div>
           <div className="choose-plan__plans">

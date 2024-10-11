@@ -1,9 +1,11 @@
+'use client'
+
 import { useEffect, useMemo, useState } from 'react';
-import Header from './components/Header/Header';
-import Main from './components/Main/Main';
-import Modal from './components/Modal/Modal';
-import { fetchData } from './utils/data';
-import { IPlan } from './types/types';
+import { fetchData } from '../utils/data';
+import { IPlan } from '../types/types';
+import Header from './Header';
+import Main from './Main';
+import Modal from './Modal';
 
 function App() {
   const [timeRemaining, setTimeRemaining] = useState<number>(1 * 6 * 1000);

@@ -119,7 +119,7 @@
 
 .choose-plan__discount-icon {
   position: absolute;
-  background-image: url('../../assets/dicsount-bg.svg');
+  background-image: url('/assets/dicsount-bg.svg');
   background-repeat: no-repeat;
   background-position: center;
   width: 70px;

@@ -1,8 +1,10 @@
+'use client'
+
 import { useEffect, useState, memo } from 'react';
-import { discounts } from '../../utils/constants';
-import './Modal.css';
-import ModalCard from '../ModalCard/ModalCard';
-import { IPlan } from '../../types/types';
+import './../styles/Modal.css';
+import { IPlan } from '@/types/types';
+import { discounts } from '@/utils/constants';
+import ModalCard from './ModalCard';
 
 const Modal = memo(
   ({ isOver, popupPrices, oldPrices }: { isOver: boolean; popupPrices: IPlan[]; oldPrices: IPlan[] }) => {
