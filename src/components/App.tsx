@@ -6,7 +6,11 @@ import Header from './Header';
 import Main from './Main';
 import Modal from './Modal';
 
-function App({ initialData }: { initialData: IPlan[] }) {
+interface AppProps {
+  data: IPlan[];
+}
+
+function App({ data }: AppProps) {
   const [timeRemaining, setTimeRemaining] = useState<number>(1 * 6 * 1000);
   const [isActive, setIsActive] = useState<boolean>(true);
   const [isOver, setIsOver] = useState<boolean>(false);
@@ -40,12 +44,12 @@ function App({ initialData }: { initialData: IPlan[] }) {
   const minutes = Math.floor((timeRemaining / 1000 / 60) % 60);
   const seconds = Math.floor((timeRemaining / 1000) % 60);
 
-  const newPrices = useMemo(() => initialData.filter((item: IPlan) => item.isPopular === true), [initialData]);
+  const newPrices = useMemo(() => data.filter((item: IPlan) => item.isPopular === true), [data]);
   const oldPrices = useMemo(
-    () => initialData.filter((item: IPlan) => item.isPopular === false && item.isDiscount === false),
-    [initialData]
+    () => data.filter((item: IPlan) => item.isPopular === false && item.isDiscount === false),
+    [data]
   );
-  const popupPrices = useMemo(() => initialData.filter((item: IPlan) => item.isDiscount === true), [initialData]);
+  const popupPrices = useMemo(() => data.filter((item: IPlan) => item.isDiscount === true), [data]);
 
   return (
     <>
