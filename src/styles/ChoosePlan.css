@@ -134,6 +134,14 @@
   color: #818798;
 }
 
+.choose-plan__cards-container {
+  display: flex;
+  column-gap: 14px;
+  row-gap: 36px;
+  flex-wrap: wrap;
+  margin-bottom: 12.79px;
+}
+
 @keyframes pulse {
   0% {
     transform: scale(1);

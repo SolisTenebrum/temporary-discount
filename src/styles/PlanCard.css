@@ -1,11 +1,3 @@
-.choose-plan__cards-container {
-  display: flex;
-  column-gap: 8px;
-  row-gap: 36px;
-  flex-wrap: wrap;
-  margin-bottom: 12.79px;
-}
-
 .choose-plan__card {
   border-color: #d3d6dd;
   border-radius: 20px;
